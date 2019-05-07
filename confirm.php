@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru|Montserrat:700|Nunito:900i" rel="stylesheet">
   <!-- lightbox.css -->
   <link rel="stylesheet" href="css/lightbox.min.css">
-  <link rel="stylesheet" href="./css/stylesheet.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
 

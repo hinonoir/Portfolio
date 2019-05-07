@@ -1,0 +1,85 @@
+@import "../../mixin/mq";
+@import "../../setting/color";
+
+nav {
+  display:none;
+  background-color: $color-bg-nav;
+  width:58%;
+  margin-left:auto;
+  color:#fff;
+
+  @include mq('tab'){
+    display:block;
+  }
+
+  @include mq('pc'){
+    width:56%;
+  }
+  
+  .nav-inner{
+    
+    .navbar {
+      list-style-type: none;
+    
+      @include mq('tab'){
+        display: flex;
+        align-items: flex-start;
+      }
+  
+      li{
+        @include mq('tab'){
+          flex: 1;
+          text-align: center; 
+          display: flex;
+          flex-direction: column;
+        }
+  
+        a {
+          display: inline-block;
+          position:relative;
+          color: #e0e0e0;
+          text-decoration: none;
+          padding-top:15px;
+          transition:.05s;
+
+          &:after{
+            position:absolute;
+            content:'';
+            bottom:0;
+            left:0;
+            width:0;
+            margin-bottom:2px;
+            height:2px;
+            background-color:#fff;
+            transition: .05s;
+          }
+          
+          &:hover {
+            color: #fff;
+            
+            &:after{
+              width:100%;
+            }
+          }
+
+          i{
+            font-size:22px;
+
+            @include mq('pc'){
+              font-size:24px;
+            }
+          }
+          
+          p{
+            font-size:15px;
+            
+            @include mq('pc'){
+              font-size:17px;
+              font-weight:600;
+            }
+          }
+        }/* a */
+      }/* li */
+    }/* .navbar */
+  }/* /.nav-inner */
+}/* nav */

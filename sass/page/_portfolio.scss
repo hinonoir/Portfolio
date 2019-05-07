@@ -1,0 +1,56 @@
+@import '../mixin/mq';
+@import '../setting/color';
+
+#portfolio{
+  background-color:$color-bg;
+
+  .portfolio-supple{
+    margin-bottom:15px;
+    font-weight: 600;
+  }
+
+  .portfolio-contents{
+    margin:0 20px;
+    
+    @include mq('tab'){
+      display:flex;
+      margin-bottom:30px;
+    }
+
+    .portfolio-item{
+      text-align: left;
+      margin-bottom:40px;
+      font-weight: 600;
+
+      @include mq('tab'){
+        margin-right:30px;
+        margin-bottom:0;
+
+        &:last-child{
+          margin-right:0;
+        }
+      }
+
+      .img-wrap{
+        height:180px;
+        width:100%;
+        overflow: hidden;
+        margin-bottom:10px;
+        
+        img{
+          object-fit: cover;
+          object-position: 50% 0;
+          display: block;
+          height:180px;
+          width:100%;
+          margin-bottom:10px;
+          transition:0.3s;
+  
+          &:hover{
+            transform:scale(1.05);
+          }
+        }
+      }/* /.img-wrap */
+    }/* /.portfolio-item */
+  }/* /.portfolio-contents */
+}

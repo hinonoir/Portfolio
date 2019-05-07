@@ -1,0 +1,9 @@
+@import '../mixin/mq';
+
+.br-sp{
+  display:block;
+
+  @include mq('tab'){
+    display:none;
+  }
+}

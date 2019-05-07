@@ -1,0 +1,58 @@
+@import '../mixin/mq';
+@import '../setting/color';
+
+#confirm{
+  background-color: $color-bg-sub;
+  padding-top:50px;
+
+  @include mq('tab'){
+    padding-top:65px;
+  }
+
+  @include mq('pc'){
+    padding-top:70px;
+  }
+
+  
+  form{
+    margin:0 auto;
+    max-width:600px;
+    
+    p{
+      text-align: left;
+      margin-bottom:-10px;
+
+      label{
+        margin-left:10px;
+      }
+
+      input{
+        display: block;
+        border:none;
+        border-radius: 5px;
+        width: 100%;
+        padding:8px;
+
+        &:last-child{
+          margin-bottom:0;
+        }
+      }
+    
+      textarea{
+        display: block;
+        border:none;
+        border-radius:5px;
+        width: 100%;
+        resize: vertical;
+        background-color: #fff;
+        min-height:200px;
+      }
+    }/* /p */
+
+    .btn{
+      margin-top:10px;
+      cursor:pointer;
+      width:100%;
+    }
+  }/* /form */
+}

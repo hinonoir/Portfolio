@@ -1,0 +1,9 @@
+@import "../../mixin/mq";
+@import "../../setting/color";
+
+footer{
+  width:100%;
+  background-color: $color-bg-footer;
+  color:#fff;
+  padding:6px;
+}

@@ -1,0 +1,10 @@
+@import '../mixin/mq';
+@import '../setting/color';
+
+#message{
+  background-color: $color-bg-sub;
+
+  .message-body{
+    font-weight: 600;
+  }
+}

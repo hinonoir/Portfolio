@@ -1,0 +1,58 @@
+@import '../mixin/mq';
+
+.heading{
+  height:100px;
+  margin-bottom:30px;
+
+  @include mq('tab'){
+    height:120px;
+  }
+
+  @include mq('pc'){
+    height:130px;
+  }
+  
+  i{
+    font-size:110px;
+    opacity:0.12;
+
+    @include mq('tab'){
+      font-size: 125px;
+    }
+
+    @include mq('pc'){
+      font-size:135px;
+    }
+  }/* /i */
+
+  .heading-text{
+    position:relative;
+    bottom:80px;
+
+    @include mq('tab'){
+      bottom:95px;
+    }
+
+    @include mq('pc'){
+      bottom:100px;
+    }
+
+    h2{
+      @include mq('tab'){
+        font-size:1.7em;
+      }
+
+      @include mq('pc'){
+        font-size: 1.8em;
+      }
+    }
+
+    p{
+      font-weight: 600;
+
+      @include mq('tab'){
+        font-size:1.2em;
+      }
+    }
+  }/* /.heading-text */
+}

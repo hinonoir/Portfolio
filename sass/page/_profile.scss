@@ -1,0 +1,119 @@
+@import '../mixin/mq';
+@import '../setting/color';
+
+#profile{
+  background-color: $color-bg;
+  color:#fff;
+
+  .profile-card{
+    background-color: rgba(34, 34, 34, 0.9);
+    border-radius: 10px;
+    padding:20px;
+    padding-bottom:50px;
+    margin:0 auto;
+    max-width:900px;
+    
+    .card-flex{
+
+      @include mq('tab'){
+        display: flex;
+      }
+      
+      .profile-nameimg{
+        flex:2;
+  
+        img{
+          object-fit: cover;
+          width:200px;
+          height:150px;
+          border-radius: 10px;
+          
+          @include mq('tab'){
+            object-fit: fill;
+            height:auto;
+            border-radius: 50px;  
+          }
+        }
+  
+        h3{
+          font-size:1.4em;
+          margin:10px auto;
+
+          @include mq('tab'){
+            margin:20px auto;
+          }
+        }
+  
+        .social{
+          display: flex;
+          justify-content: center;
+          margin-bottom:10px;
+          
+          li{
+            width:65px;
+            font-size:30px;
+  
+            a{
+              text-decoration: none;
+              color:inherit;
+    
+              .fa-twitter{
+                display: block;
+                transition:.2s;
+
+                &:hover{
+                  color:#1DA1F2;
+                }
+              }
+    
+              .fa-github{
+                display: block;
+                transition:.2s;
+                
+                &:hover{
+                  color:#222;
+                }
+              }
+    
+              .fa-envelope{
+                display: block;
+                transition:.2s;
+                
+                &:hover{
+                  opacity:0.8;
+                }
+              }
+            }/* /a */
+          }/* /li */
+        }/* /.social */
+      }/* /.profile-nameimg */
+  
+      .profile-detail{
+        flex:3;
+        margin-top:30px;
+        font-size: 1.2em;
+  
+        p{
+          margin-bottom:5px;
+
+          .br-tab{
+            display:none;
+
+            @include mq('tab'){
+              display:block;
+            }
+          }
+        }/* /p */
+
+        a{
+          color:#fff;
+          text-decoration: underline;
+
+          &:hover{
+            opacity:0.8;
+          }
+        }
+      }/* /.profile-detail */
+    }/* /.card-flex */
+  }/* /.profile-card */
+}

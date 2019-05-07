@@ -17,7 +17,7 @@ var browserSync = require('browser-sync');
 
 // Sassのコンパイル //
 gulp.task('sass', function () {
-  return gulp.src('./sass/stylesheet.scss')
+  return gulp.src('./sass/style.scss')
     .pipe(plumber(function(err) {console.log(err.messageFormatted);this.emit('end');}))
     .pipe(sassGlob())
     .pipe(sass({ outputStyle: 'expanded' }))
@@ -29,7 +29,7 @@ gulp.task('sass', function () {
 
 // CSSの圧縮 //
 gulp.task('mincss', function () {
-  return gulp.src('./css/stylesheet.css')
+  return gulp.src('./css/style.css')
     .pipe(cleanCss())
     .pipe(rename({ suffix: '.min'}))
     .pipe(gulp.dest('./css/'));

@@ -196,7 +196,7 @@
                 </a>
                 <p>PHPとMySQLを用いて作成した、シンプルな日記アプリです。</p>
                 <p>お試しに「テスター」で機能に触れてみることができます。</p>
-                <a class="link" href="https://yuto-hino.sakura.ne.jp/plain_nikki/">プレーンにっき</a>
+                <a class="link" href="https://yuto-hino.sakura.ne.jp/plain_nikki/" target="_blank" rel="noopener">プレーンにっき</a>
 
                 <a href="./images/プレーンにっき1（スマホ）.jpg" data-lightbox="plane-nikki" data-title="プレーンにっき"></a>
                 <a href="./images/プレーンにっき2（PC）.jpg" data-lightbox="plane-nikki" data-title="プレーンにっき"></a>
@@ -288,8 +288,8 @@
                   <img src="./img/profile.jpg" alt="profile.jpg">
                   <h3>Yuto Hino/日野 優人</h3>
                   <ul class="social">
-                    <li><a href="https://twitter.com/hinonoir64"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://github.com/hinonoir"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://twitter.com/hinonoir64" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/hinonoir" target="_blank" rel="noopener"><i class="fab fa-github"></i></a></li>
                     <li><a href="#contact"><i class="far fa-envelope"></i></a></li>
                   </ul><!-- /.social -->
                 </div><!-- /.profile-nameimg -->
@@ -300,7 +300,7 @@
                   <p>出身/所在地：滋賀県高島市</p>
                   <p>趣味：投資、登山、ゲーム</p>
                   <p>このサイトはデザインも含め<br class="br-tab">自身で作成しました。</p>
-                  <a href="#">ポートフォリオのソースコードはこちら</a>
+                  <a href="https://github.com/hinonoir/portfolio" target="_blank" rel="noopener">本ページのソースコードはこちら</a>
                 </div><!-- /.profile-detail -->
               </div><!-- /.card-flex -->
             </div><!-- /.profile-card -->

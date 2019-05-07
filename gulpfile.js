@@ -79,7 +79,7 @@ gulp.task('html', function(){
   gulp.watch('./sass/page/*.scss', gulp.task('sass'));
   gulp.watch('./sass/page/common/*.scss', gulp.task('sass'));
   gulp.watch('./sass/setting/*.scss', gulp.task('sass'));
-  gulp.watch('./css/stylesheet.css', gulp.task('mincss'));
+  gulp.watch('./css/style.css', gulp.task('mincss'));
   gulp.watch('./js/main.js', gulp.task('minjs'));
   gulp.watch('./img/base/*.{png,jpg,gif,svg}', gulp.task('minimage'));
   gulp.watch('./*.html').on('change', browserSync.reload);
@@ -109,7 +109,7 @@ gulp.task('php', function(){
   gulp.watch('./sass/page/*.scss', gulp.task('sass'));
   gulp.watch('./sass/page/common/*.scss', gulp.task('sass'));
   gulp.watch('./sass/setting/*.scss', gulp.task('sass'));
-  gulp.watch('./css/stylesheet.css', gulp.task('mincss'));
+  gulp.watch('./css/style.css', gulp.task('mincss'));
   gulp.watch('./js/main.js', gulp.task('minjs'));
   gulp.watch('./img/base/*.{png,jpg,gif,svg}', gulp.task('minimage'));
   gulp.watch('./*.php').on('change', browserSync.reload);

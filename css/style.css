@@ -23,15 +23,26 @@ body {
 	padding: 0;
 }
 
+html {
+	height: 100%;
+}
+
 body {
 	background: #fff;
 	color: #333;
-	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;
+	display: flex;
+	flex-direction: column;
+	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", meiryo, メイリオ, osaka, "MS PGothic", arial, helvetica, sans-serif;
 	font-size: 16px;
 	font-weight: 500;
+	height: 100%;
 	letter-spacing: 1px;
 	line-height: 1.6;
 	overflow-x: hidden;
+}
+
+.content {
+	flex: 1;
 }
 
 h1,
@@ -323,15 +334,9 @@ template {
 
 /* ブレイクポイントの'sp','tab','pc'のいずれかを入力 */
 
-/* ブレイクポイントの'sp','tab','pc'のいずれかを入力 */
-
 .br-sp {
 	display: block;
 }
-
-/* ブレイクポイントの'sp','tab','pc'のいずれかを入力 */
-
-/* ========== form-border ========== */
 
 .btn {
 	background-color: #222;
@@ -347,25 +352,21 @@ template {
 }
 
 .btn:hover {
-	background-color: #090909;
-	transition: .2s;
+	background-color: #3c3c3c;
+	transition: 0.1s;
 }
-
-/* ブレイクポイントの'sp','tab','pc'のいずれかを入力 */
 
 .container {
 	margin: 0 auto;
 	max-width: 100%;
 	padding: 0 10px;
 	text-align: center;
-	width: 1024px;
+	width: 1140px;
 }
 
 .heading-font {
-	font-family: 'Kosugi Maru', sans-serif;
+	font-family: "Kosugi Maru", sans-serif;
 }
-
-/* ブレイクポイントの'sp','tab','pc'のいずれかを入力 */
 
 .heading {
 	height: 100px;
@@ -386,14 +387,12 @@ template {
 	font-weight: 600;
 }
 
-/* ブレイクポイントの'sp','tab','pc'のいずれかを入力 */
-
 .inner {
 	padding: 30px 0;
 }
 
 .link {
-	color: #0366D7;
+	color: #0366d7;
 	outline: none;
 	text-decoration: none;
 }
@@ -407,7 +406,7 @@ template {
 	background-color: rgba(255, 255, 255, 0.95);
 	border: 1px solid black;
 	border-radius: 5px;
-	bottom: 0px;
+	bottom: 0;
 	display: none;
 	font-size: 1.2em;
 	font-weight: 600;
@@ -434,30 +433,36 @@ template {
 	display: inline-block;
 }
 
-/* ブレイクポイントの'sp','tab','pc'のいずれかを入力 */
-
-/* ========== form-border ========== */
-
-#confirm {
-	background-color: #e6e6e6;
-	padding-top: 50px; /* /form */
+main {
+	height: 100%;
 }
 
-#confirm form {
+main article {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+main article #confirm {
+	background-color: #e6e6e6;
+	flex: 1; /* /form */
+}
+
+main article #confirm form {
 	margin: 0 auto;
 	max-width: 600px; /* /p */
 }
 
-#confirm form p {
+main article #confirm form p {
 	margin-bottom: -10px;
 	text-align: left;
 }
 
-#confirm form p label {
+main article #confirm form p label {
 	margin-left: 10px;
 }
 
-#confirm form p input {
+main article #confirm form p input {
 	border: none;
 	border-radius: 5px;
 	display: block;
@@ -465,11 +470,11 @@ template {
 	width: 100%;
 }
 
-#confirm form p input:last-child {
+main article #confirm form p input:last-child {
 	margin-bottom: 0;
 }
 
-#confirm form p textarea {
+main article #confirm form p textarea {
 	background-color: #fff;
 	border: none;
 	border-radius: 5px;
@@ -479,23 +484,23 @@ template {
 	width: 100%;
 }
 
-#confirm form .btn {
+main article #confirm form .btn {
 	cursor: pointer;
 	margin-top: 10px;
 	width: 100%;
 }
 
-/* ブレイクポイントの'sp','tab','pc'のいずれかを入力 */
-
-/* ========== form-border ========== */
-
 #contact {
-	background-color: #e6e6e6; /* /form */
+	background-color: #e6e6e6;
+}
+
+#contact .contact-supple {
+	margin-bottom: 20px;
 }
 
 #contact form {
 	margin: 0 auto;
-	max-width: 600px; /* /p */
+	max-width: 600px;
 }
 
 #contact form p {
@@ -507,7 +512,31 @@ template {
 	margin-left: 10px;
 }
 
-#contact form p input {
+#contact form p label .required {
+	background-color: #222;
+	border-radius: 10px;
+	color: #fff;
+	display: inline-block;
+	font-weight: 600;
+	margin-bottom: 3px;
+	margin-left: 2px;
+	padding: 2px 8px;
+	vertical-align: bottom;
+}
+
+#contact form p label .any {
+	background-color: #666;
+	border-radius: 10px;
+	color: #fff;
+	display: inline-block;
+	font-weight: 600;
+	margin-bottom: 3px;
+	margin-left: 2px;
+	padding: 2px 8px;
+	vertical-align: bottom;
+}
+
+#contact form p label input {
 	border: none;
 	border-radius: 5px;
 	display: block;
@@ -515,11 +544,11 @@ template {
 	width: 100%;
 }
 
-#contact form p input:last-child {
+#contact form p label input:last-child {
 	margin-bottom: 0;
 }
 
-#contact form p textarea {
+#contact form p label textarea {
 	background-color: #fff;
 	border: none;
 	border-radius: 5px;
@@ -531,13 +560,9 @@ template {
 
 #contact form .btn {
 	cursor: pointer;
-	margin-top: 10px;
-	width: 100%;
+	margin: 10px auto 0 auto;
+	width: 80%;
 }
-
-/* ブレイクポイントの'sp','tab','pc'のいずれかを入力 */
-
-/* ========== form-border ========== */
 
 #message {
 	background-color: #e6e6e6;
@@ -547,13 +572,9 @@ template {
 	font-weight: 600;
 }
 
-/* ブレイクポイントの'sp','tab','pc'のいずれかを入力 */
-
 #mv {
 	background: url("../img/main-visual.jpg") no-repeat center;
-	background-size: cover;
-	position: relative;
-	top: 50px; /* /.mv-box */
+	background-size: cover; /* /.mv-box */
 }
 
 #mv .mv-box {
@@ -566,16 +587,12 @@ template {
 	bottom: 20px;
 	color: #fff;
 	display: none;
-	font-family: 'Nunito', sans-serif;
+	font-family: "Nunito", sans-serif;
 	font-size: 45px;
 	margin: auto; /* ページ読み込み時にフェードインさせる */
 	position: relative;
 	text-shadow: 0 0 10px #000;
 }
-
-/* ブレイクポイントの'sp','tab','pc'のいずれかを入力 */
-
-/* ========== form-border ========== */
 
 #portfolio {
 	background-color: #fff; /* /.portfolio-contents */
@@ -620,9 +637,10 @@ template {
 	transform: scale(1.05);
 }
 
-/* ブレイクポイントの'sp','tab','pc'のいずれかを入力 */
-
-/* ========== form-border ========== */
+#portfolio .btn {
+	margin: auto;
+	width: 80%;
+}
 
 #price {
 	background-color: #e6e6e6; /* /.price-table */ /* /.price-supple */
@@ -660,15 +678,11 @@ template {
 }
 
 #price .price-supple .emphasis {
-	background: linear-gradient(transparent 80%, #ff0000 20%);
+	background: linear-gradient(transparent 80%, #f00 20%);
 	display: inline-block;
 	font-size: 1.2em;
 	font-weight: 600;
 }
-
-/* ブレイクポイントの'sp','tab','pc'のいずれかを入力 */
-
-/* ========== form-border ========== */
 
 #profile {
 	background-color: #fff;
@@ -722,16 +736,16 @@ template {
 
 #profile .profile-card .card-flex .profile-nameimg .social li a .fa-twitter {
 	display: block;
-	transition: .2s;
+	transition: 0.2s;
 }
 
 #profile .profile-card .card-flex .profile-nameimg .social li a .fa-twitter:hover {
-	color: #1DA1F2;
+	color: #1da1f2;
 }
 
 #profile .profile-card .card-flex .profile-nameimg .social li a .fa-github {
 	display: block;
-	transition: .2s;
+	transition: 0.2s;
 }
 
 #profile .profile-card .card-flex .profile-nameimg .social li a .fa-github:hover {
@@ -740,7 +754,7 @@ template {
 
 #profile .profile-card .card-flex .profile-nameimg .social li a .fa-envelope {
 	display: block;
-	transition: .2s;
+	transition: 0.2s;
 }
 
 #profile .profile-card .card-flex .profile-nameimg .social li a .fa-envelope:hover {
@@ -770,13 +784,8 @@ template {
 	opacity: 0.8;
 }
 
-/* ブレイクポイントの'sp','tab','pc'のいずれかを入力 */
-
-/* ========== form-border ========== */
-
 #work {
-	background-color: #fff;
-	margin-top: 50px; /* /.work-contents */ /* /.skills */
+	background-color: #fff; /* /.work-contents */ /* /.skills */
 }
 
 #work .work-contents {
@@ -841,22 +850,18 @@ template {
 	font-size: 1em;
 }
 
-/* ブレイクポイントの'sp','tab','pc'のいずれかを入力 */
-
-/* ========== form-border ========== */
-
 /* ドロワーメニュー */
 
 .drawer-nav {
-	background-color: #222;
 	border: 2px solid #fff;
 	display: block;
 	height: 100%;
+	opacity: 0.95;
 	position: fixed;
-	right: -180px;
+	right: -200px;
 	top: 0;
-	transition: .3s;
-	width: 180px; /* ドロワーメニューのボタン */ /* /.menu-btn */ /* アクティブ時のメニューアイコン */ /* /.menu-btn.toggle span */ /* /li */
+	transition: 0.3s;
+	width: 200px; /* ドロワーメニューのボタン */ /* /.menu-btn */ /* アクティブ時のメニューアイコン */ /* /.menu-btn.toggle span */ /* /li */
 }
 
 .drawer-nav .menu-btn {
@@ -880,29 +885,29 @@ template {
 	left: 5px;
 	position: absolute;
 	top: 19px;
-	transition: .1s;
+	transition: 0.1s;
 	width: 31px;
 }
 
-.drawer-nav .menu-btn span:before {
+.drawer-nav .menu-btn span::before {
 	background-color: #fff;
-	content: '';
+	content: "";
 	height: 3px;
 	left: 0;
 	position: absolute;
 	top: -10px;
-	transition: .3s;
+	transition: 0.3s;
 	width: 100%;
 }
 
-.drawer-nav .menu-btn span:after {
+.drawer-nav .menu-btn span::after {
 	background-color: #fff;
-	content: '';
+	content: "";
 	height: 3px;
 	left: 0;
 	position: absolute;
 	top: 10px;
-	transition: .3s;
+	transition: 0.3s;
 	width: 100%;
 }
 
@@ -910,13 +915,13 @@ template {
 	background-color: transparent;
 }
 
-.drawer-nav .menu-btn.toggle span:before {
+.drawer-nav .menu-btn.toggle span::before {
 	-webkit-transform: rotate(45deg);
 	top: 0;
 	transform: rotate(45deg);
 }
 
-.drawer-nav .menu-btn.toggle span:after {
+.drawer-nav .menu-btn.toggle span::after {
 	-webkit-transform: rotate(-45deg);
 	top: 0;
 	transform: rotate(-45deg);
@@ -946,20 +951,12 @@ template {
 	right: 0;
 }
 
-/* ブレイクポイントの'sp','tab','pc'のいずれかを入力 */
-
-/* ========== form-border ========== */
-
 footer {
 	background-color: #222;
 	color: #fff;
 	padding: 6px;
 	width: 100%;
 }
-
-/* ブレイクポイントの'sp','tab','pc'のいずれかを入力 */
-
-/* ========== form-border ========== */
 
 header {
 	background-color: #222;
@@ -978,14 +975,14 @@ header .header-inner {
 }
 
 header .header-inner .header-logo {
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-size: 28px;
 	margin: 0;
 }
 
 header .header-inner .header-logo:hover {
 	opacity: 0.8;
-	transition: .1s;
+	transition: 0.1s;
 }
 
 header .header-inner .header-logo a {
@@ -994,16 +991,11 @@ header .header-inner .header-logo a {
 	text-decoration: none;
 }
 
-/* ブレイクポイントの'sp','tab','pc'のいずれかを入力 */
-
-/* ========== form-border ========== */
-
 nav {
 	background-color: #222;
 	color: #fff;
 	display: none;
-	margin-left: auto;
-	width: 58%; /* /.nav-inner */
+	margin-left: auto; /* /.nav-inner */
 }
 
 nav .nav-inner { /* .navbar */
@@ -1022,18 +1014,17 @@ nav .nav-inner .navbar li a {
 	padding-top: 15px;
 	position: relative;
 	text-decoration: none;
-	transition: .05s;
 }
 
-nav .nav-inner .navbar li a:after {
+nav .nav-inner .navbar li a::after {
 	background-color: #fff;
 	bottom: 0;
-	content: '';
+	content: "";
 	height: 2px;
 	left: 0;
 	margin-bottom: 2px;
 	position: absolute;
-	transition: .05s;
+	transition: 0.05s;
 	width: 0;
 }
 
@@ -1041,7 +1032,7 @@ nav .nav-inner .navbar li a:hover {
 	color: #fff;
 }
 
-nav .nav-inner .navbar li a:hover:after {
+nav .nav-inner .navbar li a:hover::after {
 	width: 100%;
 }
 
@@ -1050,7 +1041,7 @@ nav .nav-inner .navbar li a i {
 }
 
 nav .nav-inner .navbar li a p {
-	font-size: 15px;
+	font-size: 0.9em;
 }
 
 /* nav */
@@ -1094,12 +1085,8 @@ nav .nav-inner .navbar li a p {
 	padding: 50px 0;
 }
 
-#confirm {
-	padding-top: 65px;
-}
-
-#mv {
-	top: 65px;
+#contact form .btn {
+	width: 100%;
 }
 
 #mv .mv-box h2 {
@@ -1139,10 +1126,6 @@ nav .nav-inner .navbar li a p {
 	display: block;
 }
 
-#work {
-	margin-top: 65px;
-}
-
 #work .work-contents {
 	display: flex;
 	margin: 0;
@@ -1158,7 +1141,7 @@ nav .nav-inner .navbar li a p {
 }
 
 #work .skills .skill-item {
-	flex: none;
+	flex: 1;
 	margin: 10px auto;
 }
 
@@ -1188,7 +1171,9 @@ nav .nav-inner .navbar li {
 	display: flex;
 	flex: 1;
 	flex-direction: column;
+	margin-left: 5px;
 	text-align: center;
+	width: 64px;
 }
 
 }
@@ -1211,14 +1196,6 @@ nav .nav-inner .navbar li {
 	font-size: 1.8em;
 }
 
-#confirm {
-	padding-top: 70px;
-}
-
-#mv {
-	top: 70px;
-}
-
 #mv .mv-box {
 	height: 560px;
 }
@@ -1227,12 +1204,20 @@ nav .nav-inner .navbar li {
 	font-size: 100px;
 }
 
-#work {
-	margin-top: 70px;
-}
-
 #work .work-contents .work-item {
 	margin: 0 20px;
+}
+
+#work .skills .skill-item p {
+	font-size: 1.4em;
+}
+
+#work .skills .skill-item i {
+	font-size: 80px;
+}
+
+#work .skills .skill-item .fa-star {
+	font-size: 1.2em;
 }
 
 header .header-inner {
@@ -1243,16 +1228,17 @@ header .header-inner .header-logo {
 	font-size: 40px;
 }
 
-nav {
-	width: 56%;
+nav .nav-inner .navbar li {
+	margin-left: 15px;
+	width: 75px;
 }
 
 nav .nav-inner .navbar li a i {
-	font-size: 24px;
+	font-size: 28px;
 }
 
 nav .nav-inner .navbar li a p {
-	font-size: 17px;
+	font-size: 1.1em;
 	font-weight: 600;
 }
 

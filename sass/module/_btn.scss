@@ -1,25 +1,22 @@
-@import "../mixin/mq";
-@import "../setting/color";
+.btn {
+	display: block;
+	text-align: center;
+	color: #fff;
+	background-color: $color-button;
+	text-decoration: none;
+	border: $color-button;
+	border-radius: 5px;
+	box-shadow: 0 0 0 2px #fff, 0 0 0 6px $color-button;
+	padding: 10px 0;
+	font-size: 1.2em;
 
-.btn{
-  display: block;
-  text-align: center;
-  color: #fff;
-  background-color:$color-button;
-  text-decoration: none;
-  border:$color-button;
-  border-radius: 5px;
-  box-shadow:0 0 0 2px #fff,0 0 0 6px $color-button;
-  padding:10px 0;
-  font-size: 1.2em;
+	&:hover {
+		background-color: lighten($color-button, 10%);
+		transition: 0.1s;
+	}
 
-  &:hover{
-    background-color: darken($color-button,10%);
-    transition: .2s;
-  }
-  
-  @include mq('tab'){
-    padding:15px 0;
-    font-size:1.5em;
-  }
+	@include mq("tab") {
+		padding: 15px 0;
+		font-size: 1.5em;
+	}
 }

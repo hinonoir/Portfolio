@@ -4,8 +4,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  word-break: break-word;
+	box-sizing: border-box;
+	word-break: break-word;
 }
 
 html,
@@ -14,16 +14,28 @@ body {
 	padding: 0;
 }
 
+html {
+	height: 100%;
+}
+
 body {
-  font-size: $fz-n;
-  font-weight: $fw-base;
-  font-family: $ff-standard;
-  color: $color-text;
-  line-height: $lh-base;
-  letter-spacing: $lsp-base;
-  background: $color-bg;
-  overflow-x: hidden;
-}  
+	font-size: $fz-n;
+	font-weight: $fw-base;
+	font-family: $ff-standard;
+	color: $color-text;
+	line-height: $lh-base;
+	letter-spacing: $lsp-base;
+	background: $color-bg;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+// コンテンツ量が少なくてもフッターが画面下に来る.
+.content {
+	flex: 1;
+}
 
 h1,
 h2,
@@ -93,28 +105,28 @@ td {
 	border: 0;
 }
 
-a{
-  color:inherit;
-  outline: none;
-  text-decoration: none;
-}/* /a */
+a {
+	color: inherit;
+	outline: none;
+	text-decoration: none;
+} /* /a */
 
-br{
-  line-height:$lh-base;
+br {
+	line-height: $lh-base;
 }
 
 ul,
-ol{
-  list-style: none;
+ol {
+	list-style: none;
 }
 
-img{
-  max-width: 100%;
-  height: auto;
-  border: none;
-  vertical-align: top;
+img {
+	max-width: 100%;
+	height: auto;
+	border: none;
+	vertical-align: top;
 }
 
-textarea{
-  resize:none;
+textarea {
+	resize: none;
 }

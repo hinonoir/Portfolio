@@ -1,8 +1,16 @@
 <?php
-  session_start();
+	session_start();
 
-  // トークン生成
-  require_once('function-php/_token.php');
+	// コンタクトフォームから飛んだか判定.
+if ( $_SESSION['link'] === 1 ) {
+
+} else {
+	// 直接確認ページに飛んで来たらindex.phpにいリダイレクトさせる.
+	header( 'Location: ./index.php' );
+}
+
+  // トークン生成.
+  require 'function-php/_token.php';
 ?>
 
 <!DOCTYPE html>
@@ -24,43 +32,50 @@
 </head>
 <body>
 
-<?php require_once('./header.php'); ?>
+<?php require './header.php'; ?>
 
-<main role="main">
-  <article>
+<div class="content">
 
-    <!-- ==================== #confirm ==================== -->
-    <section id="confirm">
-      <div class="container">
-        <div class="inner">
+	<main role="main">
+		<article>
 
-          <h1 class="heading-font">メッセージ送信確認</h1>
-          
-          <form action="function-php/_send-mail.php" method="POST" class="send-form">
-            <!-- トークン認証 -->
-            <input type="hidden" name="csrf_token" value="<?php echo $csrf_token?>">
-            
-            <p><label>お名前<br>
-            <input type="text" id="name" name="name" required readonly value="<?php echo $_POST['name']?>"></label></p>
-      
-            <p><label>メールアドレス<br>
-            <input type="email" id="email" name="email" required readonly value="<?php echo $_POST['email']?>"></label></p>
-      
-            <p><label>メッセージ本文<br>
-            <textarea id="message" name="message" required readonly><?php echo $_POST['message']?></textarea></label></p>
-      
-            <input type="submit" class="btn" value="  送  信  ">
-          </form>
+		<!-- ==================== #confirm ==================== -->
+		<section id="confirm">
+			<div class="container">
+			<div class="inner">
 
-        </div><!-- /.inner -->
-      </div><!-- /.container -->
-    </section>
-    <!-- ==================== /#confirm ==================== -->
-  
-  </article>
-  </main>
+				<h1 class="heading-font">メッセージ送信確認</h1>
 
-  <?php require_once('./footer.php'); ?>
+				<form action="function-php/_send-mail.php" method="POST" class="send-form">
+				<!-- トークン認証 -->
+				<input type="hidden" name="csrf_token" value="<?php echo $_SESSION['link'] = '1'; ?>">
+
+				<p><label>お名前<br>
+				<input type="text" name="name" required readonly value="<?php echo $_POST['name']; ?>"></label></p>
+
+				<p><label>メールアドレス<br>
+				<input type="email" name="email" required readonly value="<?php echo $_POST['email']; ?>"></label></p>
+
+				<p><label>題名<br>
+				<input type="text" name="subject" readonly value="<?php echo $_POST['subject']; ?>"></label></p>
+
+				<p><label>メッセージ本文<br>
+				<textarea name="message" required readonly><?php echo $_POST['message']; ?></textarea></label></p>
+
+				<input type="submit" class="btn" value="送  信">
+				</form>
+
+			</div><!-- /.inner -->
+			</div><!-- /.container -->
+		</section>
+		<!-- ==================== /#confirm ==================== -->
+
+		</article>
+		</main>
+
+</div><!-- /.content -->
+
+	<?php require './footer.php'; ?>
 
   <!-- ==================== JavaScript ==================== -->
   <!-- jQuery -->

@@ -1,14 +1,11 @@
-@import "../mixin/mq";
-@import "../setting/breakpoints";
-
 .container {
-  margin:0 auto;
-  padding:0 10px;
-  width: $layout-width-inner;
-  max-width:100%;
-  text-align: center;
-  
-  @include mq('tab'){
-    padding:0 20px;
-  }
+	margin: 0 auto;
+	padding: 0 10px;
+	width: 1140px;
+	max-width: 100%;
+	text-align: center;
+
+	@include mq("tab") {
+		padding: 0 20px;
+	}
 }

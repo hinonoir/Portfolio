@@ -1,48 +1,77 @@
-@import '../mixin/mq';
-@import '../setting/color';
+#contact {
+	background-color: $color-bg-sub;
 
-#contact{
-  background-color: $color-bg-sub;
-  
-  form{
-    margin:0 auto;
-    max-width:600px;
-    
-    p{
-      text-align: left;
-      margin-bottom:-10px;
+	.contact-supple {
+		margin-bottom: 20px;
+	}
 
-      label{
-        margin-left:10px;
-      }
+	form {
+		margin: 0 auto;
+		max-width: 600px;
 
-      input{
-        display: block;
-        border:none;
-        border-radius: 5px;
-        width: 100%;
-        padding:8px;
+		p {
+			text-align: left;
+			margin-bottom: -10px;
 
-        &:last-child{
-          margin-bottom:0;
-        }
-      }
-    
-      textarea{
-        display: block;
-        border:none;
-        border-radius:5px;
-        width: 100%;
-        resize: vertical;
-        background-color: #fff;
-        min-height:200px;
-      }
-    }/* /p */
+			label {
+				margin-left: 10px;
 
-    .btn{
-      margin-top:10px;
-      cursor:pointer;
-      width:100%;
-    }
-  }/* /form */
+				.required {
+					padding: 2px 8px;
+					margin-bottom: 3px;
+					margin-left: 2px;
+					background-color: $color-main;
+					border-radius: 10px;
+					color: #fff;
+					font-weight: 600;
+					vertical-align: bottom;
+					display: inline-block;
+				}
+
+				.any {
+					padding: 2px 8px;
+					margin-bottom: 3px;
+					margin-left: 2px;
+					background-color: #666;
+					border-radius: 10px;
+					color: #fff;
+					font-weight: 600;
+					vertical-align: bottom;
+					display: inline-block;
+				}
+
+				input {
+					display: block;
+					border: none;
+					border-radius: 5px;
+					width: 100%;
+					padding: 8px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+
+				textarea {
+					display: block;
+					border: none;
+					border-radius: 5px;
+					width: 100%;
+					resize: vertical;
+					background-color: #fff;
+					min-height: 200px;
+				}
+			} // /label //
+		} // /p //
+
+		.btn {
+			cursor: pointer;
+			width: 80%;
+			margin: 10px auto 0 auto;
+
+			@include mq("tab") {
+				width: 100%;
+			}
+		}
+	} // /form //
 }

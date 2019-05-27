@@ -1,46 +1,35 @@
-@import '../mixin/mq';
+#mv {
+	background: url("../img/main-visual.jpg") no-repeat center;
+	background-size: cover;
 
-#mv{
-  background: url('../img/main-visual.jpg') no-repeat center;
-  background-size: cover;
-  position: relative;
-  top:50px;
+	.mv-box {
+		position: relative;
+		display: flex;
+		height: 520px;
 
-  @include mq('tab'){
-    top:65px;
-  }
+		@include mq("pc") {
+			height: 560px;
+		}
 
-  @include mq('pc'){
-    top:70px;
-  }
+		h2 {
+			font-family: "Nunito", sans-serif;
+			text-shadow: 0 0 10px #000;
+			font-size: 45px;
+			color: #fff;
+			margin: auto;
 
-  .mv-box{
-    position:relative;
-    display: flex;
-    height:520px;
+			/* ページ読み込み時にフェードインさせる */
+			position: relative;
+			bottom: 20px;
+			display: none;
 
-    @include mq('pc'){
-      height:560px;
-    }
-  
-    h2{
-      font-family: 'Nunito', sans-serif;
-      text-shadow: 0 0 10px #000;
-      font-size: 45px;
-      color:#fff;
-      margin:auto;
-      /* ページ読み込み時にフェードインさせる */
-      position:relative;
-      bottom:20px;
-      display: none;
+			@include mq("tab") {
+				font-size: 75px;
+			}
 
-      @include mq('tab'){
-        font-size:75px;
-      }
-
-      @include mq('pc'){
-        font-size:100px;
-      }
-    } /* /h2 */
-  }/* /.mv-box */
+			@include mq("pc") {
+				font-size: 100px;
+			}
+		} /* /h2 */
+	} /* /.mv-box */
 }

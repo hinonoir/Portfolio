@@ -1,52 +1,49 @@
-@import "../../mixin/mq";
-@import "../../setting/color";
+header {
+	width: 100%;
+	background-color: $color-bg-header;
+	color: #fff;
+	overflow: hidden;
+	position: fixed;
+	z-index: 1000;
 
-header{
-  width:100%;
-  background-color: $color-bg-header;
-  color:#fff;
-  overflow: hidden;
-  position:fixed;
-  z-index:1000;
+	.header-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 50px;
 
-  .header-inner{
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    height:50px;
+		@include mq("tab") {
+			height: 65px;
+			align-items: flex-end;
+		}
 
-    @include mq('tab'){
-      height:65px;
-      align-items:flex-end;
-    }
+		@include mq("pc") {
+			height: 70px;
+		}
 
-    @include mq('pc'){
-      height:70px;
-    }
-  
-    .header-logo {
-      margin:0;
-      font-family: 'Montserrat', sans-serif;
-      font-size:28px;
-      
-      &:hover{
-        opacity:0.8;
-        transition:.1s;
-      }
-      
-      @include mq('tab'){
-        font-size:35px;
-      }
+		.header-logo {
+			margin: 0;
+			font-family: "Montserrat", sans-serif;
+			font-size: 28px;
 
-      @include mq('pc'){
-        font-size:40px;
-      }
+			&:hover {
+				opacity: 0.8;
+				transition: 0.1s;
+			}
 
-      a{
-        display: block;
-        text-decoration: none;
-        color:inherit;
-      }
-    }/* .header-logo */    
-  }/* /.header-inner */
+			@include mq("tab") {
+				font-size: 35px;
+			}
+
+			@include mq("pc") {
+				font-size: 40px;
+			}
+
+			a {
+				display: block;
+				text-decoration: none;
+				color: inherit;
+			}
+		} /* .header-logo */
+	} /* /.header-inner */
 }

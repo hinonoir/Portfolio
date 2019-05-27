@@ -1,100 +1,100 @@
-@import '../mixin/mq';
-@import '../setting/color';
+#work {
+	background-color: $color-bg;
 
-#work{
-  background-color:$color-bg;
-  margin-top:50px;
+	.work-contents {
+		margin: 50px auto;
 
-  @include mq('tab'){
-    margin-top:65px;
-  }
+		@include mq("tab") {
+			display: flex;
+			margin: 0;
+		}
 
-  @include mq('pc'){
-    margin-top:70px;
-  }
+		.work-item {
+			width: 85%;
+			margin: 50px auto;
 
-  .work-contents{
-    margin:50px auto;
+			@include mq("tab") {
+				width: 100%;
+				margin: 0 10px;
+			}
 
-    @include mq('tab'){
-      display:flex;
-      margin:0;
-    }
-    
-    .work-item{
-      width:85%;
-      margin:50px auto;
+			@include mq("pc") {
+				margin: 0 20px;
+			}
 
-      @include mq('tab'){
-        width:100%;
-        margin:0 10px;
-      }
+			.work-icon {
+				display: flex;
+				height: 100px;
+				width: 100px;
+				border-radius: 50px;
+				margin: 0 auto;
+				background-color: $color-bg-sub;
 
-      @include mq('pc'){
-        margin:0 20px;
-      }
-      
-      .work-icon{
-        display: flex;
-        height:100px;
-        width:100px;
-        border-radius: 50px;
-        margin:0 auto;
-        background-color:$color-bg-sub;
-  
-        i{
-          margin:auto;
-          font-size:45px;
-        }
-      }/* /.work-icon */
+				i {
+					margin: auto;
+					font-size: 45px;
+				}
+			} /* /.work-icon */
 
-      h3{
-        margin:10px;
-        font-size: 1.25em;
-      }
+			h3 {
+				margin: 10px;
+				font-size: 1.25em;
+			}
 
-      p{
-        text-align: left;
-        font-weight: 600;
-      }
-    }/* /.work-item */
-  }/* /.work-contents */
+			p {
+				text-align: left;
+				font-weight: 600;
+			}
+		} /* /.work-item */
+	} /* /.work-contents */
 
-  .work-skill{
-    font-size: 1.4em;
-    margin-top:70px;
-  }
+	.work-skill {
+		font-size: 1.4em;
+		margin-top: 70px;
+	}
 
-  .skills{
-    display: flex;
-    flex-wrap: wrap;
+	.skills {
+		display: flex;
+		flex-wrap: wrap;
 
-    @include mq('tab'){
-      margin:0;
-    }
-    
-    .skill-item{
-      flex:50%;
-      margin: 20px auto;
+		@include mq("tab") {
+			margin: 0;
+		}
 
-      @include mq('tab'){
-        flex:none;
-        margin:10px auto;
-      }
+		.skill-item {
+			flex: 50%;
+			margin: 20px auto;
 
-      p{
-        font-size: 1.2em;
-        font-weight: 600;
-      }
+			@include mq("tab") {
+				flex: 1;
+				margin: 10px auto;
+			}
 
-      i{
-        font-size:60px;
-        margin:5px auto 0 auto;
-      }
+			p {
+				font-size: 1.2em;
+				font-weight: 600;
 
-      .fa-star{
-        font-size:1em;
-      }
-    }/* /.skill-item */
-  }/* /.skills */
+				@include mq("pc") {
+					font-size: 1.4em;
+				}
+			}
+
+			i {
+				font-size: 60px;
+				margin: 5px auto 0 auto;
+
+				@include mq("pc") {
+					font-size: 80px;
+				}
+			}
+
+			.fa-star {
+				font-size: 1em;
+
+				@include mq("pc") {
+					font-size: 1.2em;
+				}
+			}
+		} /* /.skill-item */
+	} /* /.skills */
 }

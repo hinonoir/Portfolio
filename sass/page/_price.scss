@@ -1,45 +1,41 @@
-@import '../mixin/mq';
-@import '../setting/color';
+#price {
+	background-color: $color-bg-sub;
 
-#price{
-  background-color: $color-bg-sub;
+	.price-table {
+		margin: 0 auto;
+		border-collapse: collapse;
+		width: 100%;
+		max-width: 550px;
 
-  .price-table{
-    margin:0 auto;
-    border-collapse:collapse;
-    width:100%;
-    max-width:550px;
+		th,
+		td {
+			border: 2px solid $color-main;
+			padding: 10px 5px;
+		} /* /th,td */
 
-    th,
-    td{
-      border:2px solid $color-main;
-      padding:10px 5px;
-    }/* /th,td */
-    
-    th{
-      background-color:$color-main;
-      color:#fff;
-    }
-    
-    tbody{
-      background-color:#fff;
+		th {
+			background-color: $color-main;
+			color: #fff;
+		}
 
-      tr:hover{
-        background-color: darken(#fff,5%);
-        cursor: default;
-      }
-    }
+		tbody {
+			background-color: #fff;
 
-  }/* /.price-table */
+			tr:hover {
+				background-color: darken(#fff, 5%);
+				cursor: default;
+			}
+		}
+	} /* /.price-table */
 
-  .price-supple{
-    margin-top:10px;
-    
-    .emphasis{
-      font-size: 1.2em;
-      font-weight: 600;
-      background: $color-marker;
-      display:inline-block;
-    }
-  }/* /.price-supple */
+	.price-supple {
+		margin-top: 10px;
+
+		.emphasis {
+			font-size: 1.2em;
+			font-weight: 600;
+			background: $color-marker;
+			display: inline-block;
+		}
+	} /* /.price-supple */
 }

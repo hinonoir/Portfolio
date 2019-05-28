@@ -3,7 +3,7 @@
 
 	// コンタクトフォームから飛んだか判定.
 if ( $_SESSION['link'] === 1 ) {
-
+	$_SESSION['link'] = 0;
 } else {
 	// 直接確認ページに飛んで来たらindex.phpにいリダイレクトさせる.
 	header( 'Location: ./index.php' );
@@ -28,7 +28,7 @@ if ( $_SESSION['link'] === 1 ) {
   <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru|Montserrat:700|Nunito:900i" rel="stylesheet">
   <!-- lightbox.css -->
   <link rel="stylesheet" href="css/lightbox.min.css">
-  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./css/style.min.css?ver=1.0.5">
 </head>
 <body>
 
@@ -48,18 +48,18 @@ if ( $_SESSION['link'] === 1 ) {
 
 				<form action="function-php/_send-mail.php" method="POST" class="send-form">
 				<!-- トークン認証 -->
-				<input type="hidden" name="csrf_token" value="<?php echo $_SESSION['link'] = '1'; ?>">
+				<input type="hidden" name="csrf_token" value="<?php echo $csrf_token?>">
 
-				<p><label>お名前<br>
+				<p><label>お名前
 				<input type="text" name="name" required readonly value="<?php echo $_POST['name']; ?>"></label></p>
 
-				<p><label>メールアドレス<br>
+				<p><label>メールアドレス
 				<input type="email" name="email" required readonly value="<?php echo $_POST['email']; ?>"></label></p>
 
-				<p><label>題名<br>
+				<p><label>題名
 				<input type="text" name="subject" readonly value="<?php echo $_POST['subject']; ?>"></label></p>
 
-				<p><label>メッセージ本文<br>
+				<p><label>メッセージ本文
 				<textarea name="message" required readonly><?php echo $_POST['message']; ?></textarea></label></p>
 
 				<input type="submit" class="btn" value="送  信">
@@ -84,7 +84,8 @@ if ( $_SESSION['link'] === 1 ) {
   integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
   crossorigin="anonymous"></script>
 
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
   <script src="js/lightbox.min.js"></script>
-  <script src="./js/main.min.js"></script>
+  <script src="./js/main.min.js?ver=1.0.2"></script>
 </body>
 </html>

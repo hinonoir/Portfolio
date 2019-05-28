@@ -10,47 +10,14 @@ main {
 			background-color: $color-bg-sub;
 			flex: 1;
 
-			form {
-				margin: 0 auto;
-				max-width: 600px;
+			.inner {
+				padding-top: 0;
 
-				p {
-					text-align: left;
-					margin-bottom: -10px;
+				form {
 
-					label {
-						margin-left: 10px;
-					}
-
-					input {
-						display: block;
-						border: none;
-						border-radius: 5px;
-						width: 100%;
-						padding: 8px;
-
-						&:last-child {
-							margin-bottom: 0;
-						}
-					}
-
-					textarea {
-						display: block;
-						border: none;
-						border-radius: 5px;
-						width: 100%;
-						resize: vertical;
-						background-color: #fff;
-						min-height: 200px;
-					}
-				} /* /p */
-
-				.btn {
-					margin-top: 10px;
-					cursor: pointer;
-					width: 100%;
+					@include form;
 				}
-			} /* /form */
+			}
 		} // /#confirm //
 	} // /article //
 }

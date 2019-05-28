@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru|Montserrat:700|Nunito:900i" rel="stylesheet">
   <!-- lightbox.css -->
   <link rel="stylesheet" href="css/lightbox.min.css">
-  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./css/style.min.css?ver=1.0.5">
 </head>
 <body>
 
@@ -332,16 +332,16 @@
 					<!-- コンタクトフォームから飛んだか判定. -->
 					<input type="hidden" name="csrf_token" value="<?php echo $_SESSION['link'] = 1; ?>">
 
-					<p><label>お名前<span class="required">必須</span><br>
+					<p><label>お名前<span class="required">必須</span>
 					<input type="text" name="name" required placeholder=" 例）山田太郎"></label></p>
 
-					<p><label>メールアドレス<span class="required">必須</span><br>
+					<p><label>メールアドレス<span class="required">必須</span>
 					<input type="email" name="email" required placeholder=" you@example.com"></label></p>
 
-					<p><label>題名<span class="any">任意</span><br>
+					<p><label>題名<span class="any">任意</span>
 					<input type="text" name="subject"></label></p>
 
-					<p><label>メッセージ本文<br>
+					<p><label>メッセージ本文
 					<textarea name="message" required></textarea></label></p>
 
 					<input type="submit" class="btn" value="確  認">
@@ -367,7 +367,8 @@
   integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
   crossorigin="anonymous"></script>
 
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
   <script src="js/lightbox.min.js"></script>
-  <script src="./js/main.min.js"></script>
+  <script src="./js/main.min.js?ver=1.0.2"></script>
 </body>
 </html>

@@ -4,6 +4,34 @@ $( function() {
 	var height = $( 'header' ).height();
 	$( '.content' ).css( 'margin-top', height );
 
+	// ナイススクロール
+	$( 'body' ).niceScroll({
+		cursorcolor: '#222',
+		background: '#808080',
+		cursorwidth: '14px',
+		cursorborderradius: '0',
+		zindex: '1001',
+		scrollspeed: 10,
+		mousescrollstep: 20
+	});
+
+	//ウィンドウサイズが変わった際に調整する
+	$( 'body' )
+		.getNiceScroll()
+		.resize();
+
+	// スムーススクロール //
+	$( 'a[href^="#"]' ).click( function() {
+
+		// スクロールの速度
+		var speed = 400;
+		var href = $( this ).attr( 'href' );
+		var target = $( '#' == href || '' == href ? 'html' : href );
+		var position = target.offset().top - 20;
+		$( 'body,html' ).animate({ scrollTop: position }, speed, 'swing' );
+		return false;
+	});
+
 	// ドロワーメニュー （toggle） //
 	$( '.menu-btn' ).on( 'click', function() {
 		$( '.drawer-nav' ).toggleClass( 'active' );
@@ -22,18 +50,6 @@ $( function() {
 			$( '.drawer-nav' ).removeClass( 'active' );
 			$( '.menu-btn' ).removeClass( 'toggle' );
 		}
-	});
-
-	// スムーススクロール //
-	$( 'a[href^="#"]' ).click( function() {
-
-		// スクロールの速度
-		var speed = 400;
-		var href = $( this ).attr( 'href' );
-		var target = $( '#' == href || '' == href ? 'html' : href );
-		var position = target.offset().top - 20;
-		$( 'body,html' ).animate({ scrollTop: position }, speed, 'swing' );
-		return false;
 	});
 
 	// Lightbox //

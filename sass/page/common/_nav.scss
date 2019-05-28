@@ -21,7 +21,6 @@ nav {
 			li {
 
 				@include mq("tab") {
-					flex: 1;
 					text-align: center;
 					display: flex;
 					flex-direction: column;
@@ -31,7 +30,7 @@ nav {
 
 				@include mq("pc") {
 					margin-left: 15px;
-					width: 75px;
+					width: 77px;
 				}
 
 				a {

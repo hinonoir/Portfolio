@@ -445,49 +445,77 @@ main article {
 
 main article #confirm {
 	background-color: #e6e6e6;
-	flex: 1; /* /form */
+	flex: 1;
 }
 
-main article #confirm form {
+main article #confirm .inner {
+	padding-top: 0;
+}
+
+main article #confirm .inner form {
 	margin: 0 auto;
-	max-width: 600px; /* /p */
+	max-width: 600px;
 }
 
-main article #confirm form p {
-	margin-bottom: -10px;
+main article #confirm .inner form p {
+	margin-bottom: 20px;
 	text-align: left;
 }
 
-main article #confirm form p label {
+main article #confirm .inner form p label {
 	margin-left: 10px;
 }
 
-main article #confirm form p input {
+main article #confirm .inner form p label .required {
+	background-color: #222;
+	border-radius: 10px;
+	color: #fff;
+	display: inline-block;
+	font-weight: 600;
+	margin-bottom: 4px;
+	margin-left: 2px;
+	padding: 2px 8px;
+	vertical-align: bottom;
+}
+
+main article #confirm .inner form p label .any {
+	background-color: #666;
+	border-radius: 10px;
+	color: #fff;
+	display: inline-block;
+	font-weight: 600;
+	margin-bottom: 3px;
+	margin-left: 2px;
+	padding: 2px 8px;
+	vertical-align: bottom;
+}
+
+main article #confirm .inner form p label input {
 	border: none;
 	border-radius: 5px;
-	display: block;
+	display: inline-block;
 	padding: 8px;
 	width: 100%;
 }
 
-main article #confirm form p input:last-child {
+main article #confirm .inner form p label input:last-child {
 	margin-bottom: 0;
 }
 
-main article #confirm form p textarea {
+main article #confirm .inner form p label textarea {
 	background-color: #fff;
 	border: none;
 	border-radius: 5px;
-	display: block;
+	display: inline-block;
 	min-height: 200px;
 	resize: vertical;
 	width: 100%;
 }
 
-main article #confirm form .btn {
+main article #confirm .inner form .btn {
 	cursor: pointer;
-	margin-top: 10px;
-	width: 100%;
+	margin: 10px auto 0 auto;
+	width: 80%;
 }
 
 #contact {
@@ -504,7 +532,7 @@ main article #confirm form .btn {
 }
 
 #contact form p {
-	margin-bottom: -10px;
+	margin-bottom: 20px;
 	text-align: left;
 }
 
@@ -518,7 +546,7 @@ main article #confirm form .btn {
 	color: #fff;
 	display: inline-block;
 	font-weight: 600;
-	margin-bottom: 3px;
+	margin-bottom: 4px;
 	margin-left: 2px;
 	padding: 2px 8px;
 	vertical-align: bottom;
@@ -539,7 +567,7 @@ main article #confirm form .btn {
 #contact form p label input {
 	border: none;
 	border-radius: 5px;
-	display: block;
+	display: inline-block;
 	padding: 8px;
 	width: 100%;
 }
@@ -552,7 +580,7 @@ main article #confirm form .btn {
 	background-color: #fff;
 	border: none;
 	border-radius: 5px;
-	display: block;
+	display: inline-block;
 	min-height: 200px;
 	resize: vertical;
 	width: 100%;
@@ -858,10 +886,10 @@ main article #confirm form .btn {
 	height: 100%;
 	opacity: 0.95;
 	position: fixed;
-	right: -200px;
+	right: -220px;
 	top: 0;
-	transition: 0.3s;
-	width: 200px; /* ドロワーメニューのボタン */ /* /.menu-btn */ /* アクティブ時のメニューアイコン */ /* /.menu-btn.toggle span */ /* /li */
+	transition: 0.2s;
+	width: 220px; /* ドロワーメニューのボタン */ /* /.menu-btn */ /* アクティブ時のメニューアイコン */ /* /.menu-btn.toggle span */ /* /li */
 }
 
 .drawer-nav .menu-btn {
@@ -896,7 +924,7 @@ main article #confirm form .btn {
 	left: 0;
 	position: absolute;
 	top: -10px;
-	transition: 0.3s;
+	transition: 0.2s;
 	width: 100%;
 }
 
@@ -907,7 +935,7 @@ main article #confirm form .btn {
 	left: 0;
 	position: absolute;
 	top: 10px;
-	transition: 0.3s;
+	transition: 0.2s;
 	width: 100%;
 }
 
@@ -1085,6 +1113,10 @@ nav .nav-inner .navbar li a p {
 	padding: 50px 0;
 }
 
+main article #confirm .inner form .btn {
+	width: 100%;
+}
+
 #contact form .btn {
 	width: 100%;
 }
@@ -1095,12 +1127,13 @@ nav .nav-inner .navbar li a p {
 
 #portfolio .portfolio-contents {
 	display: flex;
-	margin-bottom: 30px;
+	justify-content: space-between;
+	margin: 0 0 30px 0;
 }
 
 #portfolio .portfolio-contents .portfolio-item {
 	margin-bottom: 0;
-	margin-right: 30px;
+	width: 32%;
 }
 
 #portfolio .portfolio-contents .portfolio-item:last-child {
@@ -1169,7 +1202,6 @@ nav .nav-inner .navbar {
 
 nav .nav-inner .navbar li {
 	display: flex;
-	flex: 1;
 	flex-direction: column;
 	margin-left: 5px;
 	text-align: center;
@@ -1230,7 +1262,7 @@ header .header-inner .header-logo {
 
 nav .nav-inner .navbar li {
 	margin-left: 15px;
-	width: 75px;
+	width: 77px;
 }
 
 nav .nav-inner .navbar li a i {

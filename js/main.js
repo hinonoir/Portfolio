@@ -1,24 +1,33 @@
 $( function() {
 
-	//ヘッダーの高さ分だけコンテンツを下げる
+	// ヘッダーの高さ分だけコンテンツを下げる
 	var height = $( 'header' ).height();
 	$( '.content' ).css( 'margin-top', height );
 
-	// ナイススクロール
-	$( 'body' ).niceScroll({
-		cursorcolor: '#222',
-		background: '#808080',
-		cursorwidth: '14px',
-		cursorborderradius: '0',
-		zindex: '1001',
-		scrollspeed: 10,
-		mousescrollstep: 20
-	});
+	// Edge,IEシリーズのみナイススクロールを適用.
+	var agent = window.navigator.userAgent.toLowerCase();
+	if (
+		-1 !== agent.indexOf( 'edge' ) ||
+		-1 !== agent.indexOf( 'msie 9.' ) ||
+		-1 !== agent.indexOf( 'trident/7' )
+	) {
 
-	//ウィンドウサイズが変わった際に調整する
-	$( 'body' )
-		.getNiceScroll()
-		.resize();
+		// ナイススクロール
+		$( 'body' ).niceScroll({
+			cursorcolor: '#222',
+			background: '#808080',
+			cursorwidth: '14px',
+			cursorborderradius: '0',
+			zindex: '1001',
+			scrollspeed: 10,
+			mousescrollstep: 20
+		});
+
+		// ウィンドウサイズが変わった際に調整する
+		$( 'body' )
+			.getNiceScroll()
+			.resize();
+	}
 
 	// スムーススクロール //
 	$( 'a[href^="#"]' ).click( function() {

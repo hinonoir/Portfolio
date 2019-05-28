@@ -86,6 +86,6 @@ if ( $_SESSION['link'] === 1 ) {
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
   <script src="js/lightbox.min.js"></script>
-  <script src="./js/main.min.js?ver=1.0.2"></script>
+  <script src="./js/main.min.js?ver=1.0.3"></script>
 </body>
 </html>

@@ -123,11 +123,6 @@
 					<div class="skill-parameter"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div><!-- /.skill-parameter -->
 					</div><!-- /.skill-item -->
 
-					<div class="skill-item">
-					<p>XD</p>
-					<i class="fab fa-adobe"></i>
-					<div class="skill-parameter"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div><!-- /.skill-parameter -->
-					</div><!-- /.skill-item -->
 				</div><!-- /.skills -->
 
 				</div><!-- /.inner -->
